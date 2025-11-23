@@ -13,11 +13,23 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int stack[40],top,i;
+ void display()
+{
+    for(i=top;i>=0;i--)
+       {
+           printf("%d\n",stack[i]);
+       }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="435" height="478" alt="image" src="https://github.com/user-attachments/assets/282170d6-29ac-44b4-ab61-5cac7adf5904" />
+
+
+
 
 
 
@@ -35,12 +47,25 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
+```
+int size=3,top=-1;
+float stack[100];
+void push (float data)
+{
+    if(top==size-1){
+        printf("stack is full\n");
+    }else{
+        top+=1;
+        stack[top]=data;
+    }
+}
+```
 
-//type your code here
 
 Output:
 
-//paste your output here
+<img width="527" height="480" alt="image" src="https://github.com/user-attachments/assets/6a996060-50eb-4741-bdd5-a7f76d9d4d4b" />
+
 
 
 
@@ -61,12 +86,27 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
+```
+int front,rear;
+float queue[100];
 
-//type your code here
-
+void display()
+{
+    if(front==-1){
+        printf("No elements to display");
+    }else{
+        for(int i=front;i<=rear;i++){
+            printf("%.1f\n",queue[i]);
+        }
+    }
+}
+```
 Output:
 
-//paste your output here
+<img width="670" height="481" alt="image" src="https://github.com/user-attachments/assets/c645abf5-8518-4072-bcd3-95f3779a6995" />
+
+
+
 
 
 Result:
@@ -85,12 +125,24 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
-
-//type your code here
+```
+int size = 10, rear, front;
+float queue[50];
+void enqueue(float data)
+{
+    if(rear < size){
+        if(front == -1) front = 0;
+        rear++;
+        queue[rear] = data;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="708" height="442" alt="image" src="https://github.com/user-attachments/assets/d1d237f8-dfa1-4c1e-ab46-a4048d810ad5" />
+
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -120,12 +172,27 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
+```
+int front, rear;
+void dequeue()
+{
+    if(front == -1 || front > rear){
+        printf("Queue underflow\n");
+    }
+    else{
+        front = front + 1;
+    }
+}
+```
 
-//type your code here
+
 
 Output:
 
-//paste your output here
+<img width="727" height="645" alt="image" src="https://github.com/user-attachments/assets/3e4f62ac-5cca-4e77-840f-a37c47e7eb3b" />
+
+
+
 
 
 Result:
